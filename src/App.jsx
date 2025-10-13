@@ -1,7 +1,6 @@
 import React from 'react'
 import Home from './pages/Home';
-import Style from './app.module.css'
-
+import './app.css';
 
 const App=()=> {
   return (<>
