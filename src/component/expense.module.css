@@ -1,0 +1,94 @@
+.container{
+    background-color:rgba(255, 255, 255, 0.227);
+    width: 22em;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    font-size: 1.8rem;
+    gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 33.33%;
+    color: white;
+}
+.container button{
+
+    padding: 0.6rem;
+    width: 10rem;
+    border:none;
+    background-color: rgb(247, 65, 65);
+    border-radius: 2rem;
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight:500;
+}
+.container button:hover{
+    cursor: pointer;
+    scale: 1.1;
+    transition:ease-out 0.23s;
+
+}
+.modal{
+    
+    background-color:oklch(20.8% 0.042 265.755);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: white;
+    position: fixed;
+    width: 40vw;
+    height: 30vh;
+    padding: 2rem;
+    top: 25%;
+    left: 29%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    border: 1px solid white; 
+}
+.modalOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(3px); 
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.inputfield{
+    border: none;
+    padding: 0.2rem;
+    border-radius: 2rem;
+    text-align: center;
+    width: 15rem;
+    font-size: 1rem;
+
+}
+.buttonContainer{
+    display: flex;
+    gap: 1rem;
+}
+.buttonContainer button{
+    padding:0.7rem;   
+    width: 7rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1rem;
+
+}
+.open:hover{
+    cursor: pointer;
+    background-color: rgb(47, 255, 61);
+}
+.close:hover{
+    cursor: pointer;
+    background-color: red;
+}

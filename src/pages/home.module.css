@@ -1,0 +1,28 @@
+.container{
+    border: 1px solid black;
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    background-color:oklch(48.326% 0.07816 266.421 / 0.249);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 90vw;
+    margin: auto;
+    border-radius: 1rem;
+    color: white;
+}
+.bottomContainer{
+
+    width: 90vw;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.maincontainer{
+    color: white;
+    width: 94vw;
+    margin: auto;
+
+
+}

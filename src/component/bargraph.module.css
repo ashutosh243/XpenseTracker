@@ -1,0 +1,12 @@
+.container{
+    width: 33.33%;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    color: white;
+}
+.bargraph{
+    background-color: white;
+    border-radius: 0.2rem;
+    color: black;
+}

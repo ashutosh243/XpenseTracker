@@ -1,0 +1,22 @@
+*{
+
+}
+.container{
+    width: 66.33%;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    color: white;
+  
+}
+.transaction{
+    background-color: white;
+    border-radius: 0.2rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}

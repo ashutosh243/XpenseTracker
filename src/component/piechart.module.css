@@ -1,0 +1,14 @@
+.container{
+    
+    background-color:rgba(255, 255, 255, 0.227);
+    width: 22em;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 33.33%;
+    color: white;
+}
