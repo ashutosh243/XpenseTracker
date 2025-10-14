@@ -9,7 +9,7 @@ function BarGraph() {
   return (
     <div className={Style.container}>
       <div>Top Expenses</div>
-      <ResponsiveContainer width="100%" height="80%">
+    <ResponsiveContainer width="100%" height="80%">
       <BarChart width={150} height={40} data={data}>
         <Bar dataKey="value" fill="#8884d8"  label={{fill: '#000000ff', fontSize: 22 }}/>
           <YAxis  tick={{ fontSize: 15, fill: '#ffffffff' }}/>
@@ -17,7 +17,6 @@ function BarGraph() {
           <Tooltip/>
       </BarChart>
     </ResponsiveContainer>
-
     </div>
   )
 }

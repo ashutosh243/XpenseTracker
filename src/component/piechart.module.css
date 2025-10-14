@@ -12,3 +12,10 @@
     width: 33.33%;
     color: white;
 }
+@media  (max-width:690px){
+
+    .container{
+        width: 90%;
+    }
+    
+}

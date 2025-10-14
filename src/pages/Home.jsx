@@ -7,7 +7,7 @@ import Transaction from '../component/Transaction';
 import BarGraph from '../component/BarGraph';
 
 const Home=()=>{
-  return (
+  return(
       <div className={Style.maincontainer}>
           <h1>Expense Tracker</h1>
           <div className={Style.container}>

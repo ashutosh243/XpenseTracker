@@ -1,13 +1,13 @@
 .container{
     background-color:rgba(255, 255, 255, 0.181);
-    width: 22em;
+    width: 22rem;
     height: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     gap: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 33.33%;
@@ -84,4 +84,18 @@
 .close:hover{
     cursor: pointer;
     background-color: red;
+}
+
+@media  (max-width:690px){
+
+    .container{
+        width: 90%;
+    }
+    
+}
+@media (max-width:500px){
+
+    .container button{
+        width: 9rem;
+    }
 }

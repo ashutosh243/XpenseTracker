@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
-    font-size: 1.8rem;
+     font-size: 1.5rem;
     gap: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 33.33%;
@@ -15,7 +15,7 @@
 }
 .container button{
 
-    padding: 0.6rem;
+    padding: 0.6rem;    
     width: 10rem;
     border:none;
     background-color: rgb(247, 65, 65);
@@ -91,4 +91,16 @@
 .close:hover{
     cursor: pointer;
     background-color: red;
+}
+
+@media (max-width:690px){
+    .container{
+        width: 90%;
+    }  
+}
+@media (max-width:500px){
+
+    .container button{
+        width: 9rem;
+    }
 }
