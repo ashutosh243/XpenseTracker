@@ -9,7 +9,7 @@ const Wallet = () => {
     const [wallet, setWallet] = useState(()=>{
         let data=localStorage.getItem('wallet');
         console.log(data);
-        if(data==="null")
+        if(data===null)
         {
             localStorage.setItem('wallet',JSON.stringify(5000));
             return 5000;
