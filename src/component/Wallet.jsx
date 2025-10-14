@@ -5,9 +5,19 @@ import ReactModal from 'react-modal';
 
 
 const Wallet = () => {
+    
     const [wallet, setWallet] = useState(()=>{
-        const data=localStorage.getItem('wallet');
-        return data===null?Number(0):JSON.parse(data);
+        let data=localStorage.getItem('wallet');
+        console.log(data);
+        if(data==="null")
+        {
+            localStorage.setItem('wallet',JSON.stringify(5000));
+            return 5000;
+        }
+        else
+        {
+            return JSON.parse(data);
+        }
     });
     const [balance,setBalance]=useState(0);
     const [isOpen,setOpen]=useState(false);
@@ -20,22 +30,21 @@ const Wallet = () => {
     }
     const addBalance=()=>{
         setWallet((prev)=>{return (Number(prev)+Number(balance))});
-        localStorage.setItem('wallet',balance);
+        localStorage.setItem('wallet',wallet);
         setBalance(Number(0));
     }
-
     return (<>
     <div className={Style.container} >
         <ReactModal isOpen={isOpen} className={Style.modal} overlayClassName={Style.modalOverlay}>
             <h1>Add Balance</h1>
             <input type="number"  placeholder='Income Amount' onChange={handleChange} value={balance}/>
             <div className={Style.buttonContainer}>
-                <button className={Style.open} onClick={addBalance}>Add</button>
-                <button className={Style.close} onClick={handlClick}>close</button>
+                <button type='submit' className={Style.open} onClick={addBalance}>Add</button>
+                <button type='submit' className={Style.close} onClick={handlClick}>close</button>
             </div>
         </ReactModal>
         <div>Wallet Balance: {wallet}</div>
-        <button type='button' onClick={handlClick}>+ Add Income</button>
+        <button type='submit' onClick={handlClick}>+ Add Income</button>
     </div>
 
     </>)
