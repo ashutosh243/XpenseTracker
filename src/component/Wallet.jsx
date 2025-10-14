@@ -35,7 +35,7 @@ const Wallet = () => {
             </div>
         </ReactModal>
         <div>Wallet Balance: {wallet}</div>
-        <button type='submit' onClick={handlClick}>Add Income</button>
+        <button type='button' onClick={handlClick}>+ Add Income</button>
     </div>
 
     </>)
