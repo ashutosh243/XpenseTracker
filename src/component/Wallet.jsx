@@ -39,7 +39,7 @@ const Wallet = () => {
             <h1>Add Balance</h1>
             <input type="number"  placeholder='Income Amount' onChange={handleChange} value={balance}/>
             <div className={Style.buttonContainer}>
-                <button type='submit' className={Style.open} onClick={addBalance}>Add</button>
+                <button type='submit' className={Style.open} onClick={addBalance}>Add Balance</button>
                 <button type='submit' className={Style.close} onClick={handlClick}>close</button>
             </div>
         </ReactModal>
