@@ -69,7 +69,7 @@ const Expense = () => {
                 </form>
             </ReactModal>
             <div>Expense: {Expense}</div>
-            <button onClick={handlClick}>+Add Expense</button>
+            <button type="submit    "  onClick={handlClick}>Add Expense</button>
         </div>
     </>
     )

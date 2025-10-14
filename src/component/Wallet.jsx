@@ -28,14 +28,14 @@ const Wallet = () => {
     <div className={Style.container} >
         <ReactModal isOpen={isOpen} className={Style.modal} overlayClassName={Style.modalOverlay}>
             <h1>Add Balance</h1>
-            <input type="text"  placeholder='Enter Balance' onChange={handleChange} value={balance}/>
+            <input type="number"  placeholder='Income Amount' onChange={handleChange} value={balance}/>
             <div className={Style.buttonContainer}>
                 <button className={Style.open} onClick={addBalance}>Add</button>
                 <button className={Style.close} onClick={handlClick}>close</button>
             </div>
         </ReactModal>
         <div>Wallet Balance: {wallet}</div>
-        <button onClick={handlClick}>+Add Income</button>
+        <button type='submit' onClick={handlClick}>Add Income</button>
     </div>
 
     </>)
