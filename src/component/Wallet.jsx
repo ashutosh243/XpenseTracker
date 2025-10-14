@@ -29,8 +29,9 @@ const Wallet = () => {
         setBalance(e.target.value);
     }
     const addBalance=()=>{
+        const newwallet=wallet+Number(balance);
         setWallet((prev)=>{return (Number(prev)+Number(balance))});
-        localStorage.setItem('wallet',wallet);
+        localStorage.setItem('wallet',newwallet);
         setBalance(Number(0));
     }
     return (<>
