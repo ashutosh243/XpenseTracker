@@ -41,10 +41,13 @@ const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet
         localStorage.setItem('expenses', JSON.stringify(expenseArray));
 
         setFormData({ title: "", price: "", category: '', date: '' });
+
+        setOpen(false);
+        
     }
     return (<>
         <div className={Style.container}>
-            <ReactModal isOpen={isOpen} className={Style.modal} overlayClassName={Style.modalOverlay}>
+            <ReactModal isOpen={isOpen} className={Style.modal} overlayClassName={Style.modalOverlay} ariaHideApp={false}>
                 <form className={Style.form} onSubmit={handlesubmit}>
                     <input type="text" placeholder='Title' name='title' className={Style.inputfield} value={formData.title} onChange={handleChange} />
                     <input type='text' placeholder='price' name='price' className={Style.inputfield} value={formData.price} onChange={handleChange} />
