@@ -55,7 +55,7 @@ const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet
                     </select>
                     <input name='date' type="date" placeholder='dd/mm/yy' className={Style.inputfield} value={formData.date} onChange={handleChange} />
                     <div className={Style.buttonContainer}>
-                        <button className={Style.open} type='submit'>Add Expense</button>
+                        <button className={Style.open} type='submit'>+ Add Expense</button>
                         <button className={Style.close} onClick={handlClick}>Close</button>
                     </div>
                 </form>
