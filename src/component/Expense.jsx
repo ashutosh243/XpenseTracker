@@ -21,7 +21,7 @@ const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet
 
         e.preventDefault();
         const { title, price, category, date } = formData;
-        if (title === '' || price === '' || category === '') {
+        if (title === '' || price === '' || category === '' || date === '') {
             alert("Enter all Details");
             return;
         }
@@ -42,7 +42,7 @@ const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet
 
         setFormData({ title: "", price: "", category: '', date: '' });
 
-        setOpen(false);
+        // setOpen(false);
         
     }
     return (<>
