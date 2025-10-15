@@ -42,7 +42,7 @@ const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet
 
         setFormData({ title: "", price: "", category: '', date: '' });
 
-        // setOpen(false);
+        setOpen(false);
         
     }
     return (<>
@@ -59,12 +59,12 @@ const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet
                     <input name='date' type="date" placeholder='dd/mm/yy' className={Style.inputfield} value={formData.date} onChange={handleChange} />
                     <div className={Style.buttonContainer}>
                         <button className={Style.open} type="submit">Add Expense</button>
-                        <button className={Style.close} onClick={handlClick}>Close</button>
+                        <button className={Style.close} onClick={handlClick} type="button">Close</button>
                     </div>
                 </form>
             </ReactModal>
             <div>Expenses: {Expense}</div>
-            <button type="submit"  onClick={handlClick}>+ Add Expense</button>
+            <button type="button" onClick={handlClick}>+ Add Expense</button>
         </div>
     </>
     )
