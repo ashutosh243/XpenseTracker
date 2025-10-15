@@ -19,6 +19,7 @@ const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet
     }
     const handlesubmit = (e) => {
 
+        e.preventDefault();
         const { title, price, category, date } = formData;
         if (title === '' || price === '' || category === '' || date === '') {
             alert("Enter all Details");
