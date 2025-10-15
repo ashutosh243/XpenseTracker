@@ -50,12 +50,12 @@ const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet
                     <input type='text' placeholder='price' name='price' className={Style.inputfield} value={formData.price} onChange={handleChange} />
                     <select name='category' className={Style.inputfield} value={formData.category} onChange={handleChange}>
                         <option value="Food">Food</option>
-                        <option value="Entertainement">Entertainment</option>
+                        <option value="Entertainment">Entertainment</option>
                         <option value="Travel">Travel</option>
                     </select>
                     <input name='date' type="date" placeholder='dd/mm/yy' className={Style.inputfield} value={formData.date} onChange={handleChange} />
                     <div className={Style.buttonContainer}>
-                        <button className={Style.open} type='submit'>+ Add Expense</button>
+                        <button className={Style.open} type='submit'>Add Expense</button>
                         <button className={Style.close} onClick={handlClick}>Close</button>
                     </div>
                 </form>
