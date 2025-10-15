@@ -10,7 +10,11 @@ import { useState } from 'react';
 const Home=()=>{
 
   const [formData, setFormData] = useState({ title: "", price: "", category: 'Food', date: '' });
-  const [allExpense, setAllExpense] = useState([]);
+  const [allExpense, setAllExpense] = useState(()=>{
+       
+    const data=localStorage.getItem('expenses');
+    return data===null?[]:JSON.parse(data);
+  });
   const [wallet, setWallet] = useState(()=>{
           let data=localStorage.getItem('wallet');
           if(data===null)
