@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import Style from './card.module.css';
 
 
-const Card=({title,price,category,date,id})=>{
-  
-  const [expense,setExpense]=useState(()=>{
-    const data=localStorage.getItem('expenses');
-    return data==null?[]:JSON.parse(data);
-  });
-  const handleDelete=(id)=>{ 
-    const newexpense= expense.filter((data)=>{return data.id!==id});
-    setExpense(newexpense);
+const Card=({title,price,category,date,id,allExpense,setAllExpense,wallet,setWallet})=>{
+
+  const handleDelete=(id)=>{
+    const obj=allExpense.find((data)=>{return data.id===id});
+    const newexpense= allExpense.filter((data)=>{return data.id!==id});
+    setWallet((prev)=>{return Number(prev)+Number(obj.price)});
+    setAllExpense(newexpense);
     localStorage.setItem('expenses',JSON.stringify(newexpense));
   }
   const handleEdit=(id)=>{

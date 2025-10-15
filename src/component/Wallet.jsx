@@ -3,27 +3,12 @@ import Style from './wallet.module.css';
 import { useState } from 'react';
 import ReactModal from 'react-modal';
 
-
-const Wallet = () => {
+const Wallet = ({wallet,setWallet}) => {
     
-    const [wallet, setWallet] = useState(()=>{
-        let data=localStorage.getItem('wallet');
-        console.log(data);
-        if(data===null)
-        {
-            localStorage.setItem('wallet',JSON.stringify(5000));
-            return 5000;
-        }
-        else
-        {
-            return JSON.parse(data);
-        }
-    });
     const [balance,setBalance]=useState(0);
     const [isOpen,setOpen]=useState(false);
-    
     const handlClick=()=>{
-             setOpen((prev)=>{return !prev});
+        setOpen((prev)=>{return !prev});
     }
     const handleChange=(e)=>{
         setBalance(e.target.value);

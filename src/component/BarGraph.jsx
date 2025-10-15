@@ -1,4 +1,3 @@
-import React from 'react'
 import Style from './bargraph.module.css';
 import { BarChart, Bar, ResponsiveContainer,Tooltip,YAxis,XAxis } from 'recharts';
 import { getData } from '../helper/getData';

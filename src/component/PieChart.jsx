@@ -7,8 +7,7 @@ import {getData}  from '../helper/getData';
 const Piechart = () => {
 
     
-const data01 =getData();
-console.log(data01);
+     const data01 =getData();
     return (<>
         <div className={Style.container}>
             <ResponsiveContainer width="100%" height="100%">

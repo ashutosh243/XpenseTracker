@@ -4,15 +4,9 @@ import { useState } from 'react';
 import ReactModal from 'react-modal';
 
 
-const Expense = () => {
+const Expense = ({formData,setFormData,allExpense,setAllExpense,wallet,setWallet}) => {
     const [Expense, setExpense] = useState(0);
     const [isOpen, setOpen] = useState(false);
-    const [formData, setFormData] = useState({ title: "", price: "", category: 'Food', date: '' });
-    const [allExpense, setAllExpense] = useState([]);
-    const [wallet, setWallet] = useState(() => {
-        let data = localStorage.getItem('wallet');
-        return JSON.parse(data);
-    });
     useEffect(()=>{
         localStorage.setItem('wallet',wallet);  
     },[wallet]);
@@ -33,22 +27,20 @@ const Expense = () => {
         }
         if(wallet<Number(price))
         {
-
             alert("Your wallet balance is low");
             return;
         }
         setWallet(wallet-Number(price));
         let saved = localStorage.getItem('expenses');
         let expenseArray = saved ? JSON.parse(saved) : [];
-        let updatedFormData={...formData,id:expenseArray.length+1};  //just for id
+        console.log(expenseArray[expenseArray.length-1]);
+        let updatedFormData={...formData,id:expenseArray[expenseArray.length-1]?.id!==undefined?expenseArray[expenseArray.length-1]?.id+1:1};  //just for id
         expenseArray.push(updatedFormData);
 
-        setAllExpense((prev) => { return expenseArray });
+        setAllExpense(() => { return expenseArray });
         localStorage.setItem('expenses', JSON.stringify(expenseArray));
 
-        console.log("here");
         setFormData({ title: "", price: "", category: '', date: '' });
-
     }
     return (<>
         <div className={Style.container}>
